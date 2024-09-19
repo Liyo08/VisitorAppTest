@@ -5,7 +5,7 @@ import axios from 'axios'
 const ViewAllVisitor = () => {
     const [data, changeData]=useState([   ])
 const fetchData=()=>{
-    axios.get(" http://172.16.12.153:4000/getvistors").then(
+    axios.get("http://35.170.103.9:4057/getvistors").then(
         (response)=>{
             changeData(response.data)}
     ).catch()
@@ -31,32 +31,27 @@ useEffect(
       <th scope="col">Date & Time</th>
     </tr>
   </thead>
-  <tbody>
-    
-    
-   
-  </tbody>
-{
-  
-    data.map(
-(value,index)=>{
-    return <tr>
-    <td>{value.firstname}</td>
-    <td>{value.lastname}</td>
-     <td>{value.purpose}</td>
-      <td>{value.whomToMeet}</td>
-      <td>{value.date}</td>
-      
 
-    </tr>
+  <tbody>
+  {
+  
+  data.map(
+(value,index)=>{
+  return <tr>
+  <td>{value.firstname}</td>
+  <td>{value.lastname}</td>
+   <td>{value.purpose}</td>
+    <td>{value.whomToMeet}</td>
+    <td>{value.date}</td>
+    
+
+  </tr>
 }
 )
 }
-
-    
-  
-</table>
-</div>
+                               </tbody>
+                       </table>
+                 </div>
             </div>
         </div>
     </div>

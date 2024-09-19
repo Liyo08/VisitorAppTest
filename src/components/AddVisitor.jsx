@@ -18,7 +18,7 @@ import axios from 'axios'
 
     const readValues=()=>{
         console.log(input)
-        axios.post("http://172.16.12.153:4000/addVisitor",input).then(
+        axios.post("http://35.170.103.9:4057/addvisitor",input).then(
             (response)=>{
                 alert("Successfully added")
             }
